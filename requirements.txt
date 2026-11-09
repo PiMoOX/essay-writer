@@ -1,0 +1,9 @@
+openai
+python-dotenv
+markdown
+python-docx
+pypdf
+python-multipart
+reportlab
+arabic-reshaper
+python-bidi

@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ---- Animated background orbs ---- */
+.orb {
+  filter: blur(60px);
+  will-change: transform;
+  animation: orb-drift 26s ease-in-out infinite alternate;
+}
+
+.orb-blue {
+  animation-duration: 32s;
+  animation-delay: -8s;
+}
+
+.orb-indigo {
+  animation-duration: 38s;
+  animation-delay: -16s;
+}
+
+@keyframes orb-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2.5rem, 2rem, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-2rem, -1.5rem, 0) scale(0.96);
+  }
+}
+
+/* ---- Animated "Essay Writer" title ---- */
+.title-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    #c4b5fd 0%,
+    #f0abfc 26%,
+    #fdf2fe 46%,
+    #ffffff 50%,
+    #fdf2fe 54%,
+    #93c5fd 74%,
+    #c084fc 100%
+  );
+  background-size: 250% 100%;
+  filter: drop-shadow(0 0 14px rgba(240, 171, 252, 0.35));
+  animation: title-shift 5s linear infinite;
+}
+
+@keyframes title-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: -250% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb,
+  .title-shimmer {
+    animation: none;
+  }
+}
+
+/* Keep the drifting orbs inside the viewport on narrow windows */
+@media (max-width: 760px) {
+  .orb {
+    filter: blur(40px);
+  }
+}

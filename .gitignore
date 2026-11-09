@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+backup-src/
+backup-backend/
+node_modules/
+dist/
+target/
+build/
+*.spec
+verify-ui/
+essay-ui/src-tauri/binaries/
+*.exe
+.git-old/
