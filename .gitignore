@@ -15,3 +15,5 @@ verify-ui/
 essay-ui/src-tauri/binaries/
 *.exe
 .git-old/
+
+*.zip
