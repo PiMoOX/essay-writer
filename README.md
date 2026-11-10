@@ -8,7 +8,7 @@ Built with **Tauri + React + TypeScript** (UI) and **FastAPI** (local backend, b
 
 👉 **[Download the latest Windows installer](https://github.com/PiMoOX/essay-writer/releases/latest)**
 
-1. Download `EssayWriter-vX.Y.Z-windows.zip` from **Releases** and unzip it.
+1.Download EssayWriter-v0.1.0-windows.zip from Releases and unzip it.
 2. Run the `*-setup.exe` file.
 3. If Windows SmartScreen shows *"Unknown publisher"*, click **More info → Run anyway** (the app is not code-signed).
 4. Open the app, click the ⚙️ **Settings** icon, and enter your **API Key** and **Base URL**.
